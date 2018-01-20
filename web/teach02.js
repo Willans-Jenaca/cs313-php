@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-
-<body>
-  <p>
-<?php
-  echo 'Hello from PHP!';
-?>
-  </p>
-</body>
-</html>
+function clickme() {
+    // This line writes to the console.
+    var answer1 = console.log("Clicked!");
+}
