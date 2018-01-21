@@ -1,4 +1,14 @@
 function clickme() {
     // This line writes to the console.
-    var answer1 = console.log("Clicked!");
+    alert("Clicked!");
+}
+
+function changeColor() {
+	var textbox_id = "textColor";
+	var textbox = document.getElementById(textbox_id);
+	var div_id = "div1";
+	var div = document.getElementById(div_id);
+
+	var color = textbox.value
+	div.style.backgroundColor = color;
 }

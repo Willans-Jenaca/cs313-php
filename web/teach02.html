@@ -10,20 +10,23 @@
               media="screen" type="text/css"/>
         <link href="teach02.css" rel="stylesheet" 
               media="screen" type="text/css"/>
-              <script type="text/javascript" src="teach02.js"></script>
+        <script type="text/javascript" src="teach02.js"></script>
 </head>
 
 <body>
-  <div>
-  	<form action="" id="form1" style="" >
-      <button type="button" name="button1" onclick="clickme()">Click Me!</button>
-    </form>
+  <div id="div1" class="div_1">
+  	<p>Div One</p>
   </div>
-  <div>
-  		
+  <div id="div2" class="div_2">
+  		<p>Div Two</p>
   </div>
-  <div>
-  	
+  <div id="div3" class="div_3">
+    <p>Div Three with button.</p> <br>
+      <button type="button" name="button1" onclick="clickme();">Click Me!</button>
   </div>
+    <label for="textColor">Color:</label> 
+      <input type="text" id="textColor" placeholder="#FF0000"><br />
+
+    <button onclick="changeColor();">Change color</button>
 </body>
 </html>

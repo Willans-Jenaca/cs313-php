@@ -5,13 +5,34 @@ html * {
     font-family: VAG Rounded, sans-serif;
     margin: 0 auto;
     text-align: left;
-    color: #064780;
+    color: #3FB8AF;
 }
 
 body {
     margin: 0 auto;
     padding: 0;
     font-family: VAG Rounded, sans-serif;
-    background-color: #070050;
+    background-color: #7FC7AF;
+}
+
+.div_1 {
+    background-color: #FF9E9D;
+    font-size: 2em;
+}
+
+.div-later {
+    font-size: 0.7em;
+}
+
+#div2 {
+    background-color: #DAD8A7;
+}
+
+#div3 {
+    background-color: #FF3D7F;
+}
+
+.hover-bold:hover {
+    font-weight: bold;
 }
 
