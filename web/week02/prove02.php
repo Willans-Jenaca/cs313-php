@@ -14,9 +14,6 @@
 </head>
 <body>
   <h1>Jenaca's Homepage</h1>
-  	<p>The Willans Family at Temple Square</p>
-    <img src="../images/IMG_5705.jpeg" alt="Willans Family at the Temple" 
-      width="454" height="605"/>
   
   <div id="div_prove" class="div_prove">
   	
@@ -30,6 +27,11 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"/>
             <script src="slider.js" type="text/javascript"></script>
+  <div>
+            <p>The Willans Family at Temple Square</p>
+    <img src="../images/IMG_5705.jpeg" alt="Willans Family at the Temple" 
+      width="454" height="605"/>
+    </div>
     <footer>         
        &copy; 2018 | Jenaca Willans 
     </footer>
