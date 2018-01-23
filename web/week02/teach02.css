@@ -25,6 +25,10 @@ p {
     color: #696C73;
 }
 
+img {
+    padding: 0.5em;
+}
+
 .div_1 {
     background-color: #FF9E9D;
     font-size: 2em;
@@ -45,6 +49,66 @@ p {
 .hover-bold:hover {
     font-weight: bold;
 }
+
+
+.covered {
+    width  : 800px;
+    height : 470px;
+    border : 30px solid #FFF;
+    margin : 50px auto;
+    background-image: url('atlanticsunrise.JPG');
+    box-shadow : 0 0 40px 5px rgba(0,0,0,.4);
+}
+
+.covered .changeable {
+    background-image: url('atlanticmoonrise.JPG');
+}
+
+.covered {
+    position: relative;
+}
+
+.handle {
+    position: absolute;
+    width : 46px;
+    height: 46px;
+    margin-left  : -23px;
+    margin-top   : -23px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align : center;
+}
+
+.handle span {
+    display : inline-block;
+    margin : 15px 1px 0;
+    color : #000;
+    transition : .1s ease-out;
+}
+
+.handle.vertical {
+    transform : rotate(90deg);
+}
+
+.handle:hover {
+    background-color: #555;
+}
+
+.handle:hover span {
+    color : #FFF;
+}
+
+.draggable {
+    background-color: #555;
+    cursor : move;
+}
+
+.draggable span {
+    margin : 15px 4px 0;
+    color  : #FFF;
+    transition : .1s ease-out;
+}
+
 
 footer {
     width: 100%; 

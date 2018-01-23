@@ -19,8 +19,17 @@
       width="454" height="605"/>
   
   <div id="div_prove" class="div_prove">
-      <button type="button" name="button_prove" onclick="prove_button();">Click Me!</button>
+  	
+      <button type="button" name="button_prove" onclick="prove_button();">Hello from Inigo</button>
   </div>
+  <div class="covered first">
+                <div class="handle"></div>
+                <div class="changeable"></div>
+            </div>
+          <!--- credit to : "https://github.com/seyedi/Covering-Bad"-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"/>
+            <script src="slider.js" type="text/javascript"></script>
     <footer>         
        &copy; 2018 | Jenaca Willans 
     </footer>
