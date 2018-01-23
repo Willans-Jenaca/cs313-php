@@ -16,8 +16,10 @@
   <h1>Jenaca's Homepage</h1>
   
   <div id="div_prove" class="div_prove">
-  	 <a href="../index.php">Assignment Page</a>
+  	 <a href="../index.php">Assignment Page</a><br>
       <button type="button" name="button_prove" onclick="prove_button();">Hello from Inigo</button>
+      <br>
+      <p>I visited the Florida coast and took these photos of the Atlantic ocean at sunrise and sunset.</p>
   </div>
   <div class="covered first">
                 <div class="handle"></div>
@@ -27,12 +29,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
             <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css"/>
             <script src="slider.js" type="text/javascript"></script>
-  <div>
-            <p>The Willans Family at Temple Square</p>
-    <img src="../images/IMG_5705.jpeg" alt="Willans Family at the Temple" 
-      width="227" height="303"/>
-    </div>
-    <footer>         
+     <footer>         
        &copy; 2018 | Jenaca Willans 
     </footer>
 </body>
