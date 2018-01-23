@@ -19,7 +19,7 @@
       width="454" height="605"/>
   
   <div id="div_prove" class="div_prove">
-      <button type="button" name="button1" onclick="clickme();">Click Me!</button>
+      <button type="button" name="button_prove" onclick="prove_button();">Click Me!</button>
   </div>
     <footer>         
        &copy; 2018 | Jenaca Willans 
