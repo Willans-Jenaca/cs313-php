@@ -16,7 +16,7 @@
   <h1>Jenaca's Homepage</h1>
   
   <div id="div_prove" class="div_prove">
-  	 <p><a href="../index.php">Assignment Page</a></p><br>
+  	 <p><a href="../index.php">&#8249; Assignment Page</a></p><br>
       <button type="button" name="button_prove" onclick="prove_button();">Hello from Inigo</button>
       <br>
       <p>I visited the Florida coast and took these photos of the Atlantic ocean at sunrise and sunset.</p>
