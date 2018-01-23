@@ -12,3 +12,8 @@ function changeColor() {
 	var color = textbox.value
 	div.style.backgroundColor = color;
 }
+
+function prove_button() {
+    // This line writes to the console.
+    alert("Clicked!");
+}
