@@ -16,7 +16,7 @@
   <h1>Jenaca's Homepage</h1>
   
   <div id="div_prove" class="div_prove">
-  	
+  	 <a href="../index.php">Assignment Page</a>
       <button type="button" name="button_prove" onclick="prove_button();">Hello from Inigo</button>
   </div>
   <div class="covered first">
@@ -30,7 +30,7 @@
   <div>
             <p>The Willans Family at Temple Square</p>
     <img src="../images/IMG_5705.jpeg" alt="Willans Family at the Temple" 
-      width="454" height="605"/>
+      width="227" height="303"/>
     </div>
     <footer>         
        &copy; 2018 | Jenaca Willans 
