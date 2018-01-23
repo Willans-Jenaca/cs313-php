@@ -1,0 +1,57 @@
+html * { 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -moz-box-sizing: border-box;
+    font-family: VAG Rounded, sans-serif;
+    margin: 0 auto;
+    text-align: left;
+    color: #BFA789;
+    /*color palette credit: http://www.colourlovers.com/palette/471289/All_About_Chocolate*/
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: VAG Rounded, sans-serif;
+    background-color: #FCFBE3;
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana; 
+    color: #382112;
+    text-align: center;
+    padding: 0.5em;
+}
+
+h2 {
+    color: #BFA789;
+    text-align: center;
+    padding: 0.2em;
+}
+
+ul {
+    list-style:none; 
+    font-family: Georgia;
+    text-align: center;
+}
+
+ul * {
+    list-style:none; 
+    font-family: Georgia;
+    text-align: center;
+    padding: 0.1em;
+    color: #5E2E0D;
+}
+
+footer {
+    width: 100%; 
+    position: absolute; /* sticky footer */
+    bottom:0px; 
+    padding:2px;
+    background-color: #BFA789; 
+    text-align:center; 
+    font-family: Verdana; 
+    color: #382112;
+}
+

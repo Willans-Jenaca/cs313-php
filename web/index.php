@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello, World!</title>
+	<title>Jenaca Willans | Home</title>
+	<meta charset="utf-8">
+        <meta name="author" content="Jenaca Willans">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Assignments for CS313 Web Engineering II">
+        <link href="normalize.css" rel="stylesheet" 
+              media="screen" type="text/css"/>
+        <link href="homeindex.css" rel="stylesheet" 
+              media="screen" type="text/css"/>
+        <script type="text/javascript" src="homeindex.js"></script>
 </head>
 <body>
-<h1><?php echo 'Hello, PHP World!'; ?></h1>
+    <header>
+        <h1>Jenaca Willans</h1>
+    </header>
+    <main>  
+        <section>
+                <h2>CS 313 Web Development Assignments</h2><br>
+                <ul>
+                    <li><a href="week01/hello.html" target="_blank">
+                            Week 1 ~ Hello World HTML</a></li>
+                    <li><a href="week01/hello.php" target="_blank">
+                            Week 1 ~ Hello From PHP</a></li>
+                    <li><a href="week01/helloworldphp.php" target="_blank">
+                            Week 1 ~ Hello World PHP</a></li>
+                    <li><a href="week02/teach02.html" target="_blank">
+                            Week 2 ~ Teach Assignment</a></li>
+                    <li><a href="week02/prove02.php" target="_blank">
+                            Week 2 ~ Jenaca's Homepage</a></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 3 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 4 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 5 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 6 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 7 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 8 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 9 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 10 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 11 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 12 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 13 ~ Coming Soon!<!-- </a> --></li>
+                    <li><!-- <a href="" target="_blank"> -->
+                            Week 14 ~ Coming Soon!<!-- </a> --></li>
+                </ul>
+            </section><br>  
+        </main>
+        <footer>         
+            &copy; 2018 | Jenaca Willans 
+        </footer>
+    </body>
 </body>
 </html>
 
