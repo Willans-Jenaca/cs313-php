@@ -33,15 +33,8 @@
         <input type="radio" name="major" id="ceng" value="Computer Engineering">
         <label for="ceng">Computer Engineering</label> <br><br>
 
-        <!-- <label for="continents">Continents you have visited:</label><br> -->
-        <input type="checkbox" name="continents[]" value="a" />North America <br />
-        <input type="checkbox" name="continents[]" value="b" />South America <br />
-        <input type="checkbox" name="continents[]" value="c" />Europe <br />
-        <input type="checkbox" name="continents[]" value="d" />Asia <br />
-        <input type="checkbox" name="continents[]" value="e" />Australia <br />
-        <input type="checkbox" name="continents[]" value="f" />Africa <br />
-        <input type="checkbox" name="continents[]" value="g" />Antarctica <br />
-        <!-- <input type="checkbox" name="continents[]" id="na" value="North America">
+        <label for="continents">Continents you have visited:</label><br>
+        <input type="checkbox" name="continents[]" id="na" value="North America">
             <label for="na">North America</label> <br>
         <input type="checkbox" name="continents[]" id="sa" value="South America">
             <label for="sa">South America</label> <br>
@@ -54,7 +47,7 @@
         <input type="checkbox" name="continents[]" id="afr" value="Africa">
             <label for="afr">Africa</label> <br>
         <input type="checkbox" name="continents[]" id="ant" value="Antarctica">
-            <label for="ant">Antarctica</label> <br> -->
+            <label for="ant">Antarctica</label> <br>
         
         <label for="comment">Comment: </label><br>
         <textarea name="comment" id="comment" rows="10" cols="50" required></textarea> <br><br>
