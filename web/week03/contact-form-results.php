@@ -11,12 +11,43 @@
         <link href="teach03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
         <script type="text/javascript" src="teach03.js"></script>
-        <!-- source: w3schools -->
 </head>
 
 <body>
-     <div><h2>Thank you, your email was sent successfully.</h2>
-            <h3><a href="teach03.php">Return to Teach 03 Form</a></h3>
-        </div>
+     <div>
+        <?php
+          $errors = '';
+          if(empty($_POST['name'])  ||
+             empty($_POST['email']) ||
+             empty($_POST['major']) ||
+             empty($_POST['comment']))
+          {
+            $errors .= "\n Error: all fields are required";
+          }
+
+          $name = $_POST['name'];
+          $email_address = $_POST['email'];
+
+          if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+            echo $errors .= "\n Error: Only letters and white space allowed"; 
+          }
+
+          if (!filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
+            $errors .= "\n Error: Invalid email address";
+          }
+
+          $major = $_POST['major'];
+          $comment = $_POST['comment'];
+
+          if( empty($errors))
+          {
+            echo "Name: " . $name . "<br>";
+            echo "Email: " . $email_address . "<br>";
+            echo "Major: " . $major . "<br>";
+            echo "Comments: " . $comment . "<br>";
+          }
+        ?> 
+        <h3><a href="teach03.php">Return to Teach 03 Form</a></h3>
+      </div>
 </body>
 </html>

@@ -16,7 +16,7 @@
 
 <body>
       <form method="post" name="teach03_form" id="teach03_form"
-      action="contact-form-handler.php" >   
+      action="contact-form-results.php" >   
         <label for="name">Name:</label><br>
         <input type="text" name="name" id="name" size="40" required><br><br>
         
@@ -24,14 +24,14 @@
         <input type="email" name="email" id="email" size="50" required><br><br>
 
         <label for="major">Major:</label><br>
-        <input type="radio" name="major" id="m1" value="cs">
-            <label for="m1">Computer Science</label> <br>
-        <input type="radio" name="major" id="m2" value="wdd">
-            <label for="m2">Web Design and Development</label> <br>
-        <input type="radio" name="major" id="m3" value="cit">
-            <label for="m3">Computer Information Technology</label> <br>
-        <input type="radio" name="major" id="m4" value="ceng">
-        <label for="m4">Computer Engineering</label> <br><br>
+        <input type="radio" name="major" id="cs" value="Computer Science">
+            <label for="cs">Computer Science</label> <br>
+        <input type="radio" name="major" id="wdd" value="Web Design and Development">
+            <label for="wdd">Web Design and Development</label> <br>
+        <input type="radio" name="major" id="cit" value="Computer Information Technology">
+            <label for="cit">Computer Information Technology</label> <br>
+        <input type="radio" name="major" id="ceng" value="Computer Engineering">
+        <label for="ceng">Computer Engineering</label> <br><br>
         
         <label for="comment">Comment: </label><br>
         <textarea name="comment" id="comment" rows="10" cols="50" required></textarea> <br><br>
