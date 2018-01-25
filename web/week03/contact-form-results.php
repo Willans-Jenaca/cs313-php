@@ -20,7 +20,6 @@
           if(empty($_POST['name'])  ||
              empty($_POST['email']) ||
              empty($_POST['major']) ||
-             empty($_POST['continent']) ||
              empty($_POST['comment']))
           {
             $errors .= "\n Error: all fields are required";
@@ -47,8 +46,27 @@
             echo "Email: <a href=\"mailto:$email_address\" target=\"_top\">" 
                 . $email_address . "</a><br>";
             echo "Major: " . $major . "<br>";
-            echo "Continent: " . $continent . "<br>";
+            
+          // reference: http://form.guide/php-form/php-form-checkbox.html
+            // if(empty($continent))
+            // {
+            //   echo("You didn't select any continents. Are you from Earth? <br>");
+            // }
+            // else
+            // {
+              $N = count($continent);
+
+              echo("You selected $N continent(s): <br>");
+              for($i=0; $i < $N; $i++)
+              {
+                echo($continent[$i] . "<br>");
+              }
+            //}
+
             echo "Comments: " . $comment . "<br>";
+          }
+          else {
+            echo $errors;
           }
         ?> 
         <h3><a href="teach03.php">Return to Teach 03 Form</a></h3>
