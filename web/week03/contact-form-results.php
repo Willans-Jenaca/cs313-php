@@ -10,38 +10,20 @@
               media="screen" type="text/css"/>
         <link href="teach03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
-        <script type="text/javascript" src="teach03.js"></script>
 </head>
 
 <body>
      <div>
         <?php
-          $errors = '';
-          if(empty($_POST['name'])  ||
-             empty($_POST['email']) ||
-             empty($_POST['major']) ||
-             empty($_POST['comment']))
-          {
-            $errors .= "\n Error: all fields are required";
-          }
 
-          $name = $_POST['name'];
-          $email_address = $_POST['email'];
+          $name = htmlspecialchars($_POST['name']);
+          $email_address = htmlspecialchars($_POST['email']);
+          $major = htmlspecialchars($_POST['major']);
+          $continents = htmlspecialchars($_POST['continents']);
+          $comment = htmlspecialchars($_POST['comment']);
 
-          if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-            echo $errors .= "\n Error: Only letters and white space allowed"; 
-          }
-
-          if (!filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
-            $errors .= "\n Error: Invalid email address";
-          }
-
-          $major = $_POST['major'];
-          $continent = $_POST['continent'];
-          $comment = $_POST['comment'];
-
-          if( empty($errors))
-          {
+          // if( empty($errors))
+          // {
             echo "Name: " . $name . "<br>";
             echo "Email: <a href=\"mailto:$email_address\" target=\"_top\">" 
                 . $email_address . "</a><br>";
@@ -54,20 +36,20 @@
             // }
             // else
             // {
-              $N = count($continent);
+              $N = count($continents);
 
               echo("You selected $N continent(s): <br>");
               for($i=0; $i < $N; $i++)
               {
-                echo($continent[$i] . "<br>");
+                echo($continents[$i] . "<br>");
               }
             //}
 
             echo "Comments: " . $comment . "<br>";
-          }
-          else {
-            echo $errors;
-          }
+          // }
+          // else {
+          //   echo $errors;
+          // }
         ?> 
         <h3><a href="teach03.php">Return to Teach 03 Form</a></h3>
       </div>
