@@ -42,7 +42,8 @@
           if( empty($errors))
           {
             echo "Name: " . $name . "<br>";
-            echo "Email: " . mailto:$email_address . "<br>";
+            echo "Email: <a href="mailto:$email_address?Subject=Contact%20Form" 
+                               target="_top">" . $email_address . "</a><br>";
             echo "Major: " . $major . "<br>";
             echo "Comments: " . $comment . "<br>";
           }
