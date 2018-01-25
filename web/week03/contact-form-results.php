@@ -19,7 +19,7 @@
           $name = htmlspecialchars($_POST['name']);
           $email_address = htmlspecialchars($_POST['email']);
           $major = htmlspecialchars($_POST['major']);
-          $continents = htmlspecialchars($_POST['continents']);
+          $continents = $_POST['continents'];
           $comment = htmlspecialchars($_POST['comment']);
 
           // if( empty($errors))
@@ -28,21 +28,27 @@
             echo "Email: <a href=\"mailto:$email_address\" target=\"_top\">" 
                 . $email_address . "</a><br>";
             echo "Major: " . $major . "<br>";
+
+            foreach ($continents as $continent)
+{
+  $continent_clean = htmlspecialchars($continent);
+  echo "<li><p>$continent_clean</p></li>";
+}
             
           // reference: http://form.guide/php-form/php-form-checkbox.html
-            // if(empty($continent))
+            // if(empty($continents))
             // {
             //   echo("You didn't select any continents. Are you from Earth? <br>");
             // }
             // else
             // {
-              $N = count($continents);
+              // $N = count($continents);
 
-              echo("You selected $N continent(s): <br>");
-              for($i=0; $i < $N; $i++)
-              {
-                echo($continents[$i] . "<br>");
-              }
+              // echo("You selected $N continent(s): <br>");
+              // for($i=0; $i < $N; $i++)
+              // {
+              //   echo($continents[$i] . "<br>");
+              // }
             //}
 
             echo "Comments: " . $comment . "<br>";
