@@ -42,7 +42,7 @@
           if( empty($errors))
           {
             echo "Name: " . $name . "<br>";
-            echo "Email: " . $email_address . "<br>";
+            echo "Email: " . mailto:$email_address . "<br>";
             echo "Major: " . $major . "<br>";
             echo "Comments: " . $comment . "<br>";
           }
