@@ -11,9 +11,13 @@ html * {
 
 body {
     margin: 0 auto;
-    padding: 1em;
+    padding: 0.5em;
     font-family: VAG Rounded, sans-serif;
     background-color: #FFFCF7;
+}
+
+form {
+    padding: 0.5em;
 }
 
 h1 {
