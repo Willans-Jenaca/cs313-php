@@ -12,7 +12,6 @@ $name = $_POST['name'];
 $email_address = $_POST['email'];
 
 if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-    echo htmlspecialchars($_SERVER["PHP_SELF"]);
   echo $errors .= "\n Error: Only letters and white space allowed"; 
 }
 

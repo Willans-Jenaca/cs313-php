@@ -20,6 +20,7 @@
           if(empty($_POST['name'])  ||
              empty($_POST['email']) ||
              empty($_POST['major']) ||
+             empty($_POST['continent']) ||
              empty($_POST['comment']))
           {
             $errors .= "\n Error: all fields are required";
@@ -37,6 +38,7 @@
           }
 
           $major = $_POST['major'];
+          $continent = $_POST['continent'];
           $comment = $_POST['comment'];
 
           if( empty($errors))
@@ -45,6 +47,7 @@
             echo "Email: <a href=\"mailto:$email_address\" target=\"_top\">" 
                 . $email_address . "</a><br>";
             echo "Major: " . $major . "<br>";
+            echo "Continent: " . $continent . "<br>";
             echo "Comments: " . $comment . "<br>";
           }
         ?> 
