@@ -11,7 +11,6 @@
         <link href="prove03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
         <script type="text/javascript" src="cart.js"></script>
-        <!-- source: https://www.youtube.com/watch?v=jrSFQ195L-I -->
 </head>
 <body>
 	<div class="wrapper">

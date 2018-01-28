@@ -11,7 +11,6 @@
         <link href="prove03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
         <script type="text/javascript" src="cart.js"></script>
-        <!-- source: https://www.youtube.com/watch?v=jrSFQ195L-I -->
 </head>
 <body>
 	<div class="wrapper">
@@ -77,7 +76,7 @@
                                     . " copies of A Wrinkle in Time = $5.00/each<br>";
                         }
                                             
-                        echo "<br>Total books in order: " 
+                        echo "<br><br>Total books in order: " 
                         . $_POST["orderbooks"] . "<br>";
                         echo "Total due today: $" . $_POST["orderDue"] . "<br><br>";
                         ?></p> 
