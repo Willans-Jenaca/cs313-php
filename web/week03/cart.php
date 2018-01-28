@@ -1,3 +1,24 @@
+<?php
+// Start the Session
+session_start();
+
+// Set CLEAN session variables
+
+$_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
+$_SESSION["book2"] = htmlspecialchars($_POST["book2"]);
+$_SESSION["book3"] = htmlspecialchars($_POST["book3"]);
+$_SESSION["book4"] = htmlspecialchars($_POST["book4"]);
+$_SESSION["book5"] = htmlspecialchars($_POST["book5"]);
+$_SESSION["book6"] = htmlspecialchars($_POST["book6"]);
+$_SESSION["book7"] = htmlspecialchars($_POST["book7"]);
+$_SESSION["book8"] = htmlspecialchars($_POST["book8"]);
+
+$_SESSION["orderbooks"] = htmlspecialchars($_POST["orderbooks"]);
+$_SESSION["orderDue"] = htmlspecialchars($_POST["orderDue"]);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,50 +56,50 @@
                     <h3>Purchase Information:</h3>
                     <p><?php
                     
-                        if ($_POST["book1"] != 0)
+                        if ($_SESSION["book1"] != 0)
                         {
-                            echo $_POST["book1"] 
+                            echo $_SESSION["book1"] 
                                     . " copies of Theodore Boone = $5.00/each";
                         }
-                        if ($_POST["book2"] != 0)
+                        if ($_SESSION["book2"] != 0)
                         {
-                            echo $_POST["book2"] 
+                            echo $_SESSION["book2"] 
                                     . " copies of The Baby-Sitter's Club = $5.00/each<br>";
                         }
-                        if ($_POST["book3"] != 0)
+                        if ($_SESSION["book3"] != 0)
                         {
-                            echo $_POST["book3"] 
+                            echo $_SESSION["book3"] 
                                     . " copies of Hardy Boys = $5.00/each<br>";
                         }
-                        if ($_POST["book4"] != 0)
+                        if ($_SESSION["book4"] != 0)
                         {
-                            echo $_POST["book4"] 
+                            echo $_SESSION["book4"] 
                                     . " copies of Harry Potter = $5.00/each<br>";
                         }
-                        if ($_POST["book5"] != 0)
+                        if ($_SESSION["book5"] != 0)
                         {
-                            echo $_POST["book5"] 
+                            echo $_SESSION["book5"] 
                                     . " copies of Island of the Blue Dolphins = $5.00/each<br>";
                         }
-                        if ($_POST["book6"] != 0)
+                        if ($_SESSION["book6"] != 0)
                         {
-                            echo $_POST["book6"] 
+                            echo $_SESSION["book6"] 
                                     . " copies of Lean on Me = $5.00/each<br>";
                         }
-                        if ($_POST["book7"] != 0)
+                        if ($_SESSION["book7"] != 0)
                         {
-                            echo $_POST["book7"] 
+                            echo $_SESSION["book7"] 
                                     . " copies of Ramona the Pest = $5.00/each<br>";
                         }
-                        if ($_POST["book8"] != 0)
+                        if ($_SESSION["book8"] != 0)
                         {
-                            echo $_POST["book8"] 
+                            echo $_SESSION["book8"] 
                                     . " copies of A Wrinkle in Time = $5.00/each<br>";
                         }
                                             
                         echo "<br><br>Total books in order: " 
-                        . $_POST["orderbooks"] . "<br>";
-                        echo "Total due today: $" . $_POST["orderDue"] . "<br><br>";
+                        . $_SESSION["orderbooks"] . "<br>";
+                        echo "Total due today: $" . $_SESSION["orderDue"] . "<br><br>";
                         ?></p> 
                     
                 </div> <!--- display ---->
