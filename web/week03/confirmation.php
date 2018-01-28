@@ -28,6 +28,7 @@ $_SESSION["phonenumber"] = htmlspecialchars($_POST["phonenumber"]);
 $_SESSION["cardtype"] = htmlspecialchars($_POST["cardtype"]);
 $_SESSION["creditcard"] = htmlspecialchars($_POST["creditcard"]);
 $_SESSION["expdate"] = htmlspecialchars($_POST["expdate"]);
+$_SESSION["email"] = htmlspecialchars($_POST["email"]);
 
 ?>
 
@@ -121,6 +122,7 @@ $_SESSION["expdate"] = htmlspecialchars($_POST["expdate"]);
               echo $_SESSION["city"] . ", " . $_SESSION["state"]
                         . " " . $_SESSION["zip"] . "<br><br>";
               echo "Phone: " . $_SESSION["phonenumber"] . "<br><br>";
+              echo "Email: " . $_SESSION["email"] . "<br><br>";
                         
               echo $_SESSION["cardtype"] . " *"
                         . substr($_SESSION["creditcard"], -4) . "<br>";
