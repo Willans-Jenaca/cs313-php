@@ -32,8 +32,8 @@
                             Week 2 ~ Jenaca's Homepage</a></li>
                     <li><a href="week03/teach03.php" target="_blank">
                             Week 3 ~ Teach Assignment</a></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 3 Prove ~ Coming Soon!<!-- </a> --></li>
+                    <li><a href="week03/prove03.php" target="_blank">
+                            Week 3 ~ Shopping Cart</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 4 ~ Coming Soon!<!-- </a> --></li>
                     <li><!-- <a href="" target="_blank"> -->

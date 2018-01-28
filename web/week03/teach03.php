@@ -10,7 +10,6 @@
               media="screen" type="text/css"/>
         <link href="teach03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
-        <script type="text/javascript" src="teach03.js"></script>
         <!-- source: w3schools -->
 </head>
 
