@@ -26,85 +26,65 @@
                     </div>  <!---- class logodiv ---->
                     <ul>
                         <li><a href="prove03.php">Browse</a></li>
-                        <li><a href="cart.php">Cart</a></li>  
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
 	<section id="main">
-		<h2>Purchase Review</h2>
+		<h2>Shopping Cart</h2>
                 <div id="display">
-                    <h3>Client Information:</h3>
-                    <p><?php
-                        echo $_POST["firstname"] . " " . $_POST["lastname"] . "<br>";
-                        echo $_POST["streetaddress"] . "<br>";
-                        echo $_POST["city"] . ", " . $_POST["state"]
-                        . " " . $_POST["zip"] . "<br><br>";
-                        echo "Phone: " . $_POST["phonenumber"] . "<br><br>";
-                        ?></p> 
+                    
                     <h3>Purchase Information:</h3>
                     <p><?php
                     
                         if ($_POST["book1"] != 0)
                         {
                             echo $_POST["book1"] 
-                                    . " Theodore Boone = $5.00/each<br>";
+                                    . " copies of Theodore Boone = $5.00/each";
                         }
                         if ($_POST["book2"] != 0)
                         {
                             echo $_POST["book2"] 
-                                    . " The Baby-Sitter's Club = $5.00/each<br>";
+                                    . " copies of The Baby-Sitter's Club = $5.00/each<br>";
                         }
                         if ($_POST["book3"] != 0)
                         {
                             echo $_POST["book3"] 
-                                    . " Hardy Boys = $5.00/each<br>";
+                                    . " copies of Hardy Boys = $5.00/each<br>";
                         }
                         if ($_POST["book4"] != 0)
                         {
                             echo $_POST["book4"] 
-                                    . " Harry Potter = $5.00/each<br>";
+                                    . " copies of Harry Potter = $5.00/each<br>";
                         }
                         if ($_POST["book5"] != 0)
                         {
                             echo $_POST["book5"] 
-                                    . " Island of the Blue Dolphins = $5.00/each<br>";
+                                    . " copies of Island of the Blue Dolphins = $5.00/each<br>";
                         }
                         if ($_POST["book6"] != 0)
                         {
                             echo $_POST["book6"] 
-                                    . " Lean on Me = $5.00/each<br>";
+                                    . " copies of Lean on Me = $5.00/each<br>";
                         }
                         if ($_POST["book7"] != 0)
                         {
                             echo $_POST["book7"] 
-                                    . " Ramona the Pest = $5.00/each<br>";
+                                    . " copies of Ramona the Pest = $5.00/each<br>";
                         }
                         if ($_POST["book8"] != 0)
                         {
                             echo $_POST["book8"] 
-                                    . " A Wrinkle in Time = $5.00/each<br>";
+                                    . " copies of A Wrinkle in Time = $5.00/each<br>";
                         }
                                             
                         echo "<br>Total books in order: " 
                         . $_POST["orderbooks"] . "<br>";
                         echo "Total due today: $" . $_POST["orderDue"] . "<br><br>";
                         ?></p> 
-                    <h3>Payment Information:</h3>
-                    <p><?php
-                        echo $_POST["cardtype"] . " *"
-                        . substr($_POST["creditcard"], -4) . "<br>";
-
-                        $expdate = $_POST["expdate"];
-                        $date = strtotime($expdate);
-                        echo "Expires: " . date("F Y", $date)
-                        . "<br><br>";
-                        ?></p> 
+                    
                 </div> <!--- display ---->
-                <form action="confirmation.php"  name="reviewForm" method="post" >
-                    <button type="submit" name="finalsubmit" 
-                            value="confirm">Confirm Order</button>
-                    <button type="submit" name="finalsubmit" 
-                            value="cancel">Cancel</button>
+                <form action="checkout.php"  name="reviewForm" method="post" >
+                    <button type="submit">Check Out</button>
                 </form>
 	</section>
 		<footer> 

@@ -1,13 +1,9 @@
 window.onload = resetBorders()
 
+
     function addbook(books) {
     
-    // Test the number of books parameter against the regex. 
-    // Ensure field has numerical values only.
-    if (/(^[0-9]*$)/.test(books))
-	{
-
-    	// If user enters a value, add the number to a running book count.
+    	    // If user enters a value, add the number to a running book count.
     	var booksArray = [Number(document.getElementById('book1').value),
 		      Number(document.getElementById('book2').value), 
 		      Number(document.getElementById('book3').value),
@@ -16,11 +12,7 @@ window.onload = resetBorders()
 		      Number(document.getElementById('book6').value),
 		      Number(document.getElementById('book7').value),
 		      Number(document.getElementById('book8').value)];
-	}
-	else
-	{
-	    resetBorders();
-	}
+	
     
     var totalbooks = 0;
     var runningTotal = 0;
@@ -39,6 +31,7 @@ window.onload = resetBorders()
     document.getElementById("orderDue").value = runningTotal.toFixed(2);
         
     // Write totals to html.
+    document.getElementById('carttotal').innerHTML = 'Go to Shopping Cart (' + totalbooks + ')';
     document.getElementById('totalbooks').innerHTML = 'Total Books: ' + totalbooks;
     document.getElementById('totalDue').innerHTML = 'Total Due: $' + runningTotal.toFixed(2);
 }

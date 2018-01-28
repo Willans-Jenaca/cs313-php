@@ -11,7 +11,6 @@
         <link href="prove03.css" rel="stylesheet" 
               media="screen" type="text/css"/>
         <script type="text/javascript" src="cart.js"></script>
-        <!-- source: https://www.youtube.com/watch?v=jrSFQ195L-I -->
 </head>
 <body>
 	<div class="wrapper">
@@ -26,7 +25,7 @@
                     </div>  <!---- class logodiv ---->
                     <ul>
                         <li><a href="prove03.php">Browse</a></li>
-                        <li><a href="cart.php">Cart</a></li>  
+                        <!-- <li id="carttotal"><a href="cart.php">Cart 0</a></li>  --> 
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
@@ -52,7 +51,6 @@
                                         <td><img src="../images/BSC.png" 
                             				alt="Babysitter's Club"></td>
                                     </tr>
-
                                 </tbody>
                             </table> <!--- bookstable1 ---->
                             <table id="bookstable2">
@@ -112,58 +110,19 @@
                         </div> <!--- id books ---->
                         <div class="acw3">
                             
-                            <div id="totalbooks">Total Books: 0</div>
-                            <div id="totalDue">Total Due: $0.00</div>
+                           <!--  <div id="totalbooks">Total Books: 0</div>
+                            <div id="totalDue">Total Due: $0.00</div> -->
                             <input type="hidden" name="orderbooks" 
                                    id="orderbooks">
                             <input type="hidden" name="orderDue" 
                                    id="orderDue">  
                         </div> <!--- class acw3 ---->
-                        <div class="acw4">
-                            <input onfocus="resetFirstName()" name="firstname"
-                                   onInput="validateFirstName(this.value)" required
-                                   id="firstname" placeholder="First Name">
-                            <input onfocus="resetLastName()" name="lastname"
-                                   onInput="validateLastName(this.value)" required 
-                                   id="lastname" placeholder="Last Name">
-                            <input onfocus="resetPhone()" name="phonenumber"
-                                   onBlur="validatePhone(this.value)" required 
-                                   id="phonenumber" placeholder="Phone Number">
-                            <input type="email" name="email" placeholder="Email">
-                        </div> <!--- class acw4 ---->
-                        <div class="acw5">    
-                            <input onfocus="resetStreet()" name="streetaddress"
-                                   onBlur="validateStreet(this.value)" required 
-                                   id="streetaddress" placeholder="Street Address">
-                            <input onfocus="resetCity()" name="city"
-                                   onInput="validateCity(this.value)" required 
-                                   id="city" placeholder="City">
-                            <input onfocus="resetState()" name="state"
-                                   onBlur="validateState(this.value)" required 
-                                   id="state" placeholder="State Abbreviation">
-                            <input onfocus="resetZip()" name="zip"
-                                   onBlur="validateZip(this.value)" required 
-                                   id="zip" placeholder="Zip Code">
-                        </div> <!--- class acw5 ---->
-                        <div class="acw6">
-                            <select name="cardtype" id="cardtype">
-                                <option value="Visa">Visa</option>
-                                <option value="MasterCard">MasterCard</option>
-                                <option value="Discover">Discover</option>
-                                <option value="AMEX">AMEX</option>
-                            </select>
-                            <input onfocus="resetCardNum()" name="creditcard"
-                                   onBlur="validateCardNum(this.value)" required 
-                                   id="creditcard" placeholder="Credit Card Number">
-                            <input onfocus="resetExpDate()" name="expdate"
-                                   onBlur="validateExpDate(this.value)" required 
-                                   id="expdate" placeholder="Expiration Date">
-                            <button type="reset">Reset</button>
-                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button><br>
+                            <button type="submit" id="carttotal">Go to Shopping Cart</button>
                         </div> <!--- class acw6 ---->
                     </form>
                     <br>
-                </div> <!--- id acwpaymentform ---->   
+                </div> <!--- id booksform ---->   
 	</section>
 		<footer> 
             &copy; 2018 | Jenaca Willans

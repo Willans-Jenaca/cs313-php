@@ -41,7 +41,7 @@ h2 {
 }
 
 p {
-    color: #FF7A1C;
+    color: #2D16DE;
     padding: 0.5em;
 }
 
@@ -168,6 +168,16 @@ nav ul ul li a {
     padding: 1em;
 }
 
+.checkoutform {
+    display: flex;
+    border: 0.5em solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
 #books {
     display: flex;
     flex-direction: row;
@@ -245,6 +255,40 @@ footer {
     flex-wrap: wrap;  
     font-family: Verdana; 
     color: #2D16DE;
+}
+
+/*** iPads (portrait and landscape) ***/
+@media all and (min-width : 601px) and (max-width : 1024px) 
+{
+
+    #books {
+        flex-wrap: wrap;
+    }
+}
+
+/*** Smartphones (portrait and landscape) ***/
+@media all and (max-width : 600px) 
+{ 
+/* Flex Container*/
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+    /* Flex Item */
+    .wrapper > * {
+        order: 100;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+
+    #books {
+        flex-wrap: wrap;
+    }
 }
 
 /*footer {
