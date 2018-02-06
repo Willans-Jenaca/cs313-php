@@ -27,8 +27,7 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($results as $row)
 {
-	echo "hello";
-	//echo "<p><strong>$row['book'] $row['chapter']:$row['verse']</strong> - \"$row['content']\"</p><br>";
+	echo "<p><strong>" . $row['book'] . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
 }
 
 ?>
