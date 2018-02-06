@@ -30,7 +30,10 @@ foreach ($results as $row)
 	echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
 }
 
-echo $_GET['book'];
+
+$statement = $db->query('SELECT * FROM scriptures WHERE book="' . $_GET['book'] . '"');
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
@@ -43,6 +46,13 @@ echo $_GET['book'];
 
         <p>All fields are required.</p><br>
 </form>
+
+<?php
+foreach ($results as $row)
+{
+	echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
+}
+?>
 
 </body>
 </html>
