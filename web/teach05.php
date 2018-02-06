@@ -30,7 +30,19 @@ foreach ($results as $row)
 	echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
 }
 
+echo $_GET['book'];
+
 ?>
+
+<form method="get" name="teach05_form" id="teach05_form"
+      action="teach05.php" >   
+        <label for="name">What book do you want to reference?</label><br>
+        <input type="text" name="book" id="name" size="40" required><br><br>        
+        
+        <input type="submit"><br><br>
+
+        <p>All fields are required.</p><br>
+</form>
 
 </body>
 </html>
