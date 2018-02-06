@@ -31,7 +31,7 @@ foreach ($results as $row)
 }
 
 
-$statement = $db->query('SELECT * FROM scriptures WHERE book="' . $_GET['book'] . '"');
+$statement = $db->query("SELECT * FROM scriptures WHERE book='" . $_GET['book'] . "'");
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
