@@ -65,7 +65,7 @@ $_SESSION["name"] = htmlspecialchars($_POST["name"]);
 
                 foreach ($results as $row)
                 {
-                   //echo "<p>" . $row['child_last_name'] . "</p>";
+                   echo "<p>" . $row['child_first_name'] . "</p>";
                     // echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] "</p>";
                 }
                 ?> 
