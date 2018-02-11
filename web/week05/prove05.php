@@ -2,13 +2,7 @@
 // Start the Session
 session_start();
 
-// Set CLEAN session variables
-
-$_SESSION["name"] = htmlspecialchars($_POST["name"]);
-
-
 ?> 
-
 
 <!DOCTYPE html>
 <html>

@@ -2,6 +2,10 @@
 // Start the Session
 session_start();
 
+// Set CLEAN session variables
+
+$_SESSION["name"] = htmlspecialchars($_POST["name"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,25 +60,21 @@ session_start();
             }
 
             
-            $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['name'] . "'");
-            $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+  $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['name'] . "'");
+  $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-
-            ?>
-
-          <?php
           foreach ($results as $row)
           {
               echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] "</p>";
           }
           ?> 
           
-          <br><button onclick="goBack()">Back Search</button>
+        <!--   <br><button onclick="goBack()">Back Search</button>
           <script>
               function goBack() {
                 window.history.back();
               }
-          </script>
+          </script> -->
           <br>
       </div> <!--- id acwpaymentform ---->   
 	</section>
