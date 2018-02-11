@@ -42,9 +42,10 @@ session_start();
                     <button type="submit" id="displaychild">List of Children</button><br>
             </form>
 
+            <p>Enter child's last name:</p>
+
             <form method="post" name="teach05_form" id="teach05_form"
                   action="post.php" >   
-                    <label for="lname">Enter child's last name:</label><br>
                     <input type="text" name="lastname" id="lname" size="40" required><br><br>        
                     
                     <input type="submit"><br><br>
