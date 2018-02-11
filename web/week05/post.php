@@ -60,8 +60,8 @@ $_SESSION["name"] = htmlspecialchars($_POST["name"]);
                 }
 
             
-  // $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['name'] . "'");
-  // $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+  $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['name'] . "'");
+  $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
   //               foreach ($results as $row)
   //               {
