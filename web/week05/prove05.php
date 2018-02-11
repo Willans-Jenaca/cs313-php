@@ -66,7 +66,7 @@
             foreach ($results as $row)
             {
                 // echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
-                echo $row['child_first_name'];
+                echo "<p>" . $row['child_first_name'] . "</p><br>";
             }
 
 
