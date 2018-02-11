@@ -1,13 +1,13 @@
-<!-- <?php
+<?php
 // Start the Session
-session_start();
+// session_start();
 
-// Set CLEAN session variables
+// // Set CLEAN session variables
 
-$_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
+// $_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
 
 
-?> -->
+?> 
 
 
 <!DOCTYPE html>
