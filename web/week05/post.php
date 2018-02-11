@@ -58,15 +58,15 @@ $_SESSION["lastname"] = htmlspecialchars($_POST["lastname"]);
                  print "<p>error: $ex->getMessage() </p>\n\n";
                  die();
                 }
-
-            
-$statement = $db->query("SELECT * FROM acw.child WHERE child_last_name='" . $_SESSION['lastname'] . "'");
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+                            
+                $statement = $db->query("SELECT * FROM acw.child 
+                  WHERE child_last_name='" . $_SESSION['lastname'] . "'");
+                $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($results as $row)
                 {
-                  echo "<p>" . $row['child_first_name'] . "</p>";
-                  //echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
+                  //echo "<p>" . $row['child_first_name'] . "</p>";
+                  echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
                 }
 
 

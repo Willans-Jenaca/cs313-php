@@ -55,8 +55,8 @@ session_start();
                  die();
                 }
 
-$statement = $db->query('SELECT * FROM acw.child');
-$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+                $statement = $db->query('SELECT * FROM acw.child');
+                $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($results as $row)
                 {
