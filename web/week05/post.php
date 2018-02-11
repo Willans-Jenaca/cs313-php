@@ -65,8 +65,8 @@ $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($results as $row)
                 {
-                   //echo "<p>" . $row['child_first_name'] . "</p>";
-                  echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
+                  echo "<p>" . $row['child_first_name'] . "</p>";
+                  //echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
                 }
 
 
