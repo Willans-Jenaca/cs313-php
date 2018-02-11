@@ -34,8 +34,8 @@
                             Week 3 ~ Teach Assignment</a></li>
                     <li><a href="week03/prove03.php" target="_blank">
                             Week 3 ~ Shopping Cart</a></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 4 ~ Coming Soon!<!-- </a> --></li>
+                    <li><a href="week05/teach05.php" target="_blank">
+                            Week 5 ~ Teach Assignment</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 5 ~ Coming Soon!<!-- </a> --></li>
                     <li><!-- <a href="" target="_blank"> -->
