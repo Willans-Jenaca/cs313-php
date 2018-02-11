@@ -60,7 +60,7 @@
              die();
             }
 
-            $statement = $db->query('SELECT * FROM child');
+            $statement = $db->query('SELECT * FROM acw.child');
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             foreach ($results as $row)
