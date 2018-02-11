@@ -39,8 +39,8 @@ session_start();
 
             <form method="post" name="teach05_form" id="teach05_form"
                   action="post.php" >   
-                    <label for="name">What child is this payment for?</label><br>
-                    <input type="text" name="name" id="name" size="40" required><br><br>        
+                    <label for="firstname">What child is this payment for?</label><br>
+                    <input type="text" name="firstname" id="firstname" size="40" required><br><br>        
                     
                     <input type="submit"><br><br>
 
