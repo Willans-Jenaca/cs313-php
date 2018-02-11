@@ -4,7 +4,7 @@ session_start();
 
 // Set CLEAN session variables
 
-$_SESSION["firstname"] = htmlspecialchars($_POST["firstname"]);
+$_SESSION["lastname"] = htmlspecialchars($_POST["lastname"]);
 
 ?>
 
@@ -60,8 +60,8 @@ $_SESSION["firstname"] = htmlspecialchars($_POST["firstname"]);
                 }
 
             
-  $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['firstname'] . "'");
-  $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+$statement = $db->query("SELECT * FROM acw.child WHERE child_last_name='" . $_SESSION['lastname'] . "'");
+$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($results as $row)
                 {
