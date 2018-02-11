@@ -66,7 +66,7 @@ $_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
             foreach ($results as $row)
             {
                 // echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
-                echo $row['child_id'] $row['child_first_name'];
+                echo $row['child_first_name'];
             }
 
 
@@ -76,7 +76,7 @@ $_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
 
             ?>
 
-            <form method="get" name="teach05_form" id="teach05_form"
+           <!--  <form method="get" name="teach05_form" id="teach05_form"
                   action="teach05.php" >   
                     <label for="name">What child is this payment for?</label><br>
                     <input type="text" name="child_first_name" id="name" size="40" required><br><br>        
@@ -84,14 +84,14 @@ $_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
                     <input type="submit"><br><br>
 
                     <p>All fields are required.</p><br>
-            </form>
+            </form> -->
 
             <?php
-            foreach ($results as $row)
-            {
-               echo $row['child_last_name'] $row['child_first_name'];
-            }
-            ?>
+            // foreach ($results as $row)
+            // {
+            //    echo $row['child_last_name'] $row['child_first_name'];
+            // }
+            ?> 
 
 	</section>
 		<footer> 
