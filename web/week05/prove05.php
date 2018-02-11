@@ -36,6 +36,11 @@ session_start();
 	<section id="main">
         <h2>Prove 05 Database Access</h2>
             
+            <form method="post" name="displaychild_form" id="displaychild_form"
+                  action="list.php" >      
+                    
+                    <button type="submit" id="displaychild">List of Children</button><br>
+            </form>
 
             <form method="post" name="teach05_form" id="teach05_form"
                   action="post.php" >   
