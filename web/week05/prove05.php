@@ -1,10 +1,10 @@
 <?php
 // Start the Session
-// session_start();
+session_start();
 
-// // Set CLEAN session variables
+// Set CLEAN session variables
 
-// $_SESSION["book1"] = htmlspecialchars($_POST["book1"]);
+$_SESSION["name"] = htmlspecialchars($_POST["name"]);
 
 
 ?> 
@@ -60,38 +60,24 @@
              die();
             }
 
-            $statement = $db->query('SELECT * FROM acw.child');
+            
+            $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_POST['name'] . "'");
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-            foreach ($results as $row)
-            {
-                // echo "<p><strong>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</strong> - \"" . $row['content'] . "\"</p><br>";
-                echo "<p>" . $row['child_first_name'] . "</p><br>";
-            }
-
-
-            // $statement = $db->query("SELECT * FROM scriptures WHERE book='" . $_GET['book'] . "'");
-            // $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
             ?>
 
-           <!--  <form method="get" name="teach05_form" id="teach05_form"
-                  action="teach05.php" >   
+            <form method="post" name="teach05_form" id="teach05_form"
+                  action="post.php" >   
                     <label for="name">What child is this payment for?</label><br>
-                    <input type="text" name="child_first_name" id="name" size="40" required><br><br>        
+                    <input type="text" name="name" id="name" size="40" required><br><br>        
                     
                     <input type="submit"><br><br>
 
                     <p>All fields are required.</p><br>
-            </form> -->
+            </form>
 
-            <?php
-            // foreach ($results as $row)
-            // {
-            //    echo $row['child_last_name'] $row['child_first_name'];
-            // }
-            ?> 
+            
 
 	</section>
 		<footer> 
