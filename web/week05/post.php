@@ -63,10 +63,6 @@ $_SESSION["name"] = htmlspecialchars($_POST["name"]);
   $statement = $db->query("SELECT * FROM acw.child WHERE child_first_name='" . $_SESSION['name'] . "'");
   $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-                if ($results = NULL) {
-                  echo "No data for this query";
-                }
-
                 foreach ($results as $row)
                 {
                    echo "<p>" . $row['child_first_name'] . "</p>";
