@@ -68,6 +68,10 @@ $_SESSION["name"] = htmlspecialchars($_POST["name"]);
                    echo "<p>" . $row['child_first_name'] . "</p>";
                     // echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] "</p>";
                 }
+
+                if ($results = "") {
+                  echo "No data for this query";
+                }
                 ?> 
                 
               <!--   <br><button onclick="goBack()">Back Search</button>
