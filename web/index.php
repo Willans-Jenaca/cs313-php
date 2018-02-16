@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenaca Willans | Home</title>
+	<title>Jenaca Willans | CS313 Home</title>
 	<meta charset="utf-8">
         <meta name="author" content="Jenaca Willans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
         <section>
                 <h2>CS 313 Web Development Assignments</h2><br>
                 <ul>
-                	<li><a href="jenaca.com">
+                	<li><a href="www.jenaca.com">
                             Jenaca.com Portfolio</a></li>
                     <li><a href="week01/hello.html" target="_blank">
                             Week 1 ~ Hello World HTML</a></li>
