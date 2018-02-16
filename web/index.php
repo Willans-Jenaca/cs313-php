@@ -20,6 +20,8 @@
         <section>
                 <h2>CS 313 Web Development Assignments</h2><br>
                 <ul>
+                	<li><a href="jenaca.com">
+                            Jenaca.com Portfolio</a></li>
                     <li><a href="week01/hello.html" target="_blank">
                             Week 1 ~ Hello World HTML</a></li>
                     <li><a href="week01/hello.php" target="_blank">
