@@ -14,15 +14,13 @@
 </head>
 <body>
     <header>
-        <h1>Jenaca Willans</h1>
+        <h1><a href="http://www.jenaca.com">Jenaca Willans</a></h1>
     </header>
     <main>  
         <section>
                 <h2>CS 313 Web Development Assignments</h2><br>
                 <ul>
-                	<li><a href="http://www.jenaca.com">
-                            Jenaca.com Portfolio</a></li>
-                    <li><a href="week01/hello.html" target="_blank">
+                	<li><a href="week01/hello.html" target="_blank">
                             Week 1 ~ Hello World HTML</a></li>
                     <li><a href="week01/hello.php" target="_blank">
                             Week 1 ~ Hello From PHP</a></li>
