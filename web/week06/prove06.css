@@ -255,6 +255,7 @@ footer {
     flex-wrap: wrap;  
     font-family: Verdana; 
     color: #2D16DE;
+    position: absolute;
 }
 
 /*** iPads (portrait and landscape) ***/
