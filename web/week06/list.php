@@ -14,7 +14,7 @@ session_start();
         <meta name="description" content="Prove 6 List from Database">
         <link href="../normalize.css" rel="stylesheet" 
               media="screen" type="text/css"/>
-        <link href="prove05.css" rel="stylesheet" 
+        <link href="prove06.css" rel="stylesheet" 
               media="screen" type="text/css"/>
 </head>
 <body>
