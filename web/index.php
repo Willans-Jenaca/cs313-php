@@ -38,8 +38,8 @@
                             Week 5 ~ Teach Assignment</a></li>
                     <li><a href="week05/prove05.php" target="_blank">
                             Week 5 ~ Database Display</a></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 6 ~ Coming Soon!<!-- </a> --></li>
+                    <li><a href="week06/prove06.php" target="_blank">
+                            Week 6 ~ Database Display II</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 7 ~ Coming Soon!<!-- </a> --></li>
                     <li><!-- <a href="" target="_blank"> -->
