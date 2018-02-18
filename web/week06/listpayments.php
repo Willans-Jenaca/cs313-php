@@ -42,11 +42,11 @@ session_start();
             <table id="paymenttable">
                 <thead id="payment_table">
                     <tr>
-                        <th>Payment Due Date</th>
-                        <th>Payment Date</th>
-                        <th>Amount Due</th>
-                        <th>Amount Paid</th>
-                        <th>Payment Note</th>
+                        <th>PAYMENT DUE DATE</th>
+                        <th>PAYMENT DATE</th>
+                        <th>AMOUNT DUE</th>
+                        <th>AMOUNT PAID</th>
+                        <th>PAYMENT NOTE</th>
                     </tr>
                 </thead>
                 <tbody>

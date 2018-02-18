@@ -48,8 +48,9 @@ $_SESSION["pay_glastname"] = htmlspecialchars($_POST["pay_glastname"]);
 
             echo "<h3>Payments by Child:</h3><br>";
                             
-            $statement = $db->query("SELECT * FROM acw.payment 
-              WHERE payment_child_id='" . $_SESSION['pay_clastname'] . "'");
+            $statement = $db->query("SELECT child.child_last_name, child.child_first_name 
+                FROM acw.payment INNER JOIN acw.child ON payment.payment_child_id = child.child_id 
+                WHERE child.child_last_name='" . $_SESSION['pay_clastname'] . "'");
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             if($results != NULL) {
@@ -63,8 +64,10 @@ $_SESSION["pay_glastname"] = htmlspecialchars($_POST["pay_glastname"]);
                
             echo "<h3>Payments by Guardian: </h3><br>";
 
-            $guardianStatement = $db->query("SELECT * FROM acw.payment 
-              WHERE guardian_last_name='" . $_SESSION['pay_glastname'] . "'");
+            $guardianStatement = $db->query("SELECT guardian.guardian_last_name, 
+                guardian.guardian_first_name FROM acw.payment INNER JOIN acw.guardian 
+                ON payment.payment_guardian_id = guardian.guardian_id 
+                WHERE guardian.guardian_last_name='" . $_SESSION['pay_glastname'] . "'");
             $guardianResults = $guardianStatement->fetchAll(PDO::FETCH_ASSOC);
 
             if($guardianResults != NULL) {
