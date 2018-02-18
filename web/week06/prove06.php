@@ -40,12 +40,12 @@ session_start();
             <form method="post" name="displaychild_form" id="displaychild_form"
                   action="listchildren.php" >      
                     
-                <button type="submit" id="displaychild">List of Children</button><br>
+                <button type="submit" id="displaychild">List Children</button><br>
             </form>
             <form method="post" name="displayguardian_form" id="displayguardian_form"
                   action="listguardian.php" >      
                    
-                <button type="submit" id="displayguardian">List of Guardians</button><br> 
+                <button type="submit" id="displayguardian">List Guardians</button><br> 
             </form>
             <form>
             <button type="button"><a href="payments.php">Search Payments</a></button><br><br>

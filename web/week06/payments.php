@@ -37,10 +37,15 @@ session_start();
 	<section id="main">
         <h2>Prove 06 Database Payment Access</h2>
             
+            <form method="post" name="addpayment_form" id="addpayment_form"
+                  action="addpayment.php" >      
+                    
+                <button type="submit" id="addpayment">Add Payment</button><br>
+            </form>
             <form method="post" name="displaypayment_form" id="displaypayment_form"
                   action="listpayments.php" >      
                     
-                <button type="submit" id="displaypayment">List of Payments</button><br>
+                <button type="submit" id="displaypayment">List Payments</button><br>
             </form>
                         
             <form method="post" name="teach06_paymentform" id="teach06_paymentform"
