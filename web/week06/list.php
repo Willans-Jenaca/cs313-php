@@ -38,22 +38,25 @@ session_start();
         <div id="phpdiv">
           <?php
 
-                $dbUrl = getenv('DATABASE_URL');
-                $dbopts = parse_url($dbUrl);
+                require("dbConnect.php");
+                $db = get_db();
 
-                $dbHost = $dbopts["host"];
-                $dbPort = $dbopts["port"];
-                $dbUser = $dbopts["user"];
-                $dbPassword = $dbopts["pass"];
-                $dbName = ltrim($dbopts["path"], '/');
+                // $dbUrl = getenv('DATABASE_URL');
+                // $dbopts = parse_url($dbUrl);
 
-                try {
-                 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-                }
-                catch (PDOException $ex) {
-                 print "<p>error: $ex->getMessage() </p>\n\n";
-                 die();
-                }
+                // $dbHost = $dbopts["host"];
+                // $dbPort = $dbopts["port"];
+                // $dbUser = $dbopts["user"];
+                // $dbPassword = $dbopts["pass"];
+                // $dbName = ltrim($dbopts["path"], '/');
+
+                // try {
+                //  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                // }
+                // catch (PDOException $ex) {
+                //  print "<p>error: $ex->getMessage() </p>\n\n";
+                //  die();
+                // }
 
                 $statement = $db->query('SELECT * FROM acw.child');
                 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
