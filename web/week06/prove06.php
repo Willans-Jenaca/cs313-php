@@ -29,7 +29,7 @@ session_start();
                         <h1 class="hide">PHP Database Access</h1>
                     </div>  <!---- class logodiv ---->
                     <ul>
-                        <li><a href="prove05.php">Home</a></li>
+                        <li><a href="prove06.php">Home</a></li>
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
