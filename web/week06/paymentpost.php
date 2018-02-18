@@ -38,49 +38,74 @@ $_SESSION["pay_glastname"] = htmlspecialchars($_POST["pay_glastname"]);
             </div>  <!---- class logodiv ---->
             <ul>
                 <li><a href="prove06.php">Home</a></li>
+                <li><a href="payments.php">Payments</a></li>
             </ul> 
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
     	<section id="main">
     		<h2>Payment Results</h2>
         <div id="phpdiv">
-          <?php
+            <table id="paymenttable">
+                <thead id="payment_table">
+                    <tr>
+                        <th>CHILD</th>
+                        <th>GUARDIAN</th>
+                        <th>PAYMENT DUE DATE</th>
+                        <th>PAYMENT DATE</th>
+                        <th>AMOUNT DUE</th>
+                        <th>AMOUNT PAID</th>
+                        <th>PAYMENT NOTE</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            echo "<h3>Payments by Child:</h3><br>";
+          <?php
                             
-            $statement = $db->query("SELECT child.child_last_name, child.child_first_name 
-                FROM acw.payment INNER JOIN acw.child ON payment.payment_child_id = child.child_id 
+            $statement = $db->query("SELECT * FROM acw.payment INNER JOIN acw.child 
+                ON payment.payment_child_id = child.child_id INNER JOIN acw.guardian 
+                ON payment.payment_guardian_id = guardian.guardian_id 
                 WHERE child.child_last_name='" . $_SESSION['pay_clastname'] . "'");
+                // OR guardian.guardian_last_name='Doe'");
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-            if($results != NULL) {
-                foreach ($results as $row)
-                {
-                    echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p><br>";
-                }
-            } else {
-                echo "<p>No children match your search</p><br>";
-            }
-               
-            echo "<h3>Payments by Guardian: </h3><br>";
 
-            $guardianStatement = $db->query("SELECT guardian.guardian_last_name, 
-                guardian.guardian_first_name FROM acw.payment INNER JOIN acw.guardian 
-                ON payment.payment_guardian_id = guardian.guardian_id 
+            foreach ($results as $row)
+                {
+                echo "<tr>
+                        <td>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</td>
+                        <td>" . $row['guardian_last_name'] . ", " . $row['guardian_first_name'] . "</td>
+                        <td>" . $row['payment_due_date'] . "</td>
+                        <td>" . $row['payment_date'] . "</td>
+                        <td>" . "$" . $row['payment_amount_due'] . "</td>
+                        <td>" . "$" .  $row['payment_amount_paid'] . "</td>
+                        <td>" . $row['payment_note'] . "</td>
+                    </tr>";
+                }
+
+            $guardianStatement = $db->query("SELECT * FROM acw.payment INNER JOIN acw.guardian 
+                ON payment.payment_guardian_id = guardian.guardian_id INNER JOIN acw.child 
+                ON payment.payment_child_id = child.child_id
                 WHERE guardian.guardian_last_name='" . $_SESSION['pay_glastname'] . "'");
             $guardianResults = $guardianStatement->fetchAll(PDO::FETCH_ASSOC);
 
-            if($guardianResults != NULL) {
-                foreach ($guardianResults as $row)
+        
+            foreach ($guardianResults as $row)
                 {
-                  echo "<p>" . $row['guardian_last_name'] . ", " . $row['guardian_first_name'] . "</p>";
+                echo "<tr>
+                        <td>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</td>
+                        <td>" . $row['guardian_last_name'] . ", " . $row['guardian_first_name'] . "</td>
+                        <td>" . $row['payment_due_date'] . "</td>
+                        <td>" . $row['payment_date'] . "</td>
+                        <td>" . "$" . $row['payment_amount_due'] . "</td>
+                        <td>" . "$" .  $row['payment_amount_paid'] . "</td>
+                        <td>" . $row['payment_note'] . "</td>
+                    </tr>";
                 }
-            } else {
-                echo "<p>No guardians match your search</p><br>";
-            }
-
-            ?> 
                 
+            ?> 
+             
+            </tbody>  
+              </table>
                 <br>
             </div> <!--- id phpdiv ---->   
       </section>

@@ -38,6 +38,7 @@ $_SESSION["glastname"] = htmlspecialchars($_POST["glastname"]);
             </div>  <!---- class logodiv ---->
             <ul>
                 <li><a href="prove06.php">Home</a></li>
+                <li><a href="payments.php">Payments</a></li>
             </ul> 
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->

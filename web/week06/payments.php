@@ -7,7 +7,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenaca Willans | Database</title>
+	<title>Jenaca Willans | Database Payments</title>
 	<meta charset="utf-8">
         <meta name="author" content="Jenaca Willans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,7 @@ session_start();
                     </div>  <!---- class logodiv ---->
                     <ul>
                         <li><a href="prove06.php">Home</a></li>
+                        <li><a href="payments.php">Payments</a></li>
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
@@ -46,11 +47,26 @@ session_start();
                   action="paymentpost.php" >  
                 <label for="clname">Search payments by child's last name:</label><br>
                 <input type="text" name="pay_clastname" id="clname" size="40" ><br><br> 
+                <p>OR</p>
                 <label for="glname">Search payments by guardian's last name:</label><br>
                 <input type="text" name="pay_glastname" id="glname" size="40" ><br><br>   
-                <input type="submit"><br><br>                    
+                <input type="button" value="Submit" onclick="validateAndSend()"><br><br>                    
             </form>
-
+            <script>
+                function validateAndSend() {
+                    if (teach06_paymentform.clname.value == '' 
+                        && teach06_paymentform.glname.value == '') {
+                        alert('Search by child OR guardian.');
+                        return false;
+                    } else if (!(teach06_paymentform.clname.value == '') 
+                        && (!(teach06_paymentform.glname.value == ''))) {
+                        alert('Search by child OR guardian, but not both.');
+                        return false;
+                    } else {
+                    teach06_paymentform.submit();
+                    }
+                }
+    </script>
 
 	</section>
 		<footer> 

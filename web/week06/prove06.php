@@ -30,6 +30,7 @@ session_start();
                     </div>  <!---- class logodiv ---->
                     <ul>
                         <li><a href="prove06.php">Home</a></li>
+                        <li><a href="payments.php">Payments</a></li>
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->

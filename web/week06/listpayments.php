@@ -33,6 +33,7 @@ session_start();
             </div>  <!---- class logodiv ---->
             <ul>
                 <li><a href="prove06.php">Home</a></li>
+                <li><a href="payments.php">Payments</a></li>
             </ul> 
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
@@ -42,6 +43,8 @@ session_start();
             <table id="paymenttable">
                 <thead id="payment_table">
                     <tr>
+                        <th>CHILD</th>
+                        <th>GUARDIAN</th>
                         <th>PAYMENT DUE DATE</th>
                         <th>PAYMENT DATE</th>
                         <th>AMOUNT DUE</th>
@@ -53,14 +56,16 @@ session_start();
 
           <?php
                 
-                $statement = $db->query('SELECT * FROM acw.payment');
+                $statement = $db->query('SELECT * FROM acw.payment INNER JOIN acw.guardian 
+                ON payment.payment_guardian_id = guardian.guardian_id INNER JOIN acw.child 
+                ON payment.payment_child_id = child.child_id');
                 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-
 
                 foreach ($results as $row)
                 {
                 echo "<tr>
+                        <td>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</td>
+                        <td>" . $row['guardian_last_name'] . ", " . $row['guardian_first_name'] . "</td>
                         <td>" . $row['payment_due_date'] . "</td>
                         <td>" . $row['payment_date'] . "</td>
                         <td>" . "$" . $row['payment_amount_due'] . "</td>
