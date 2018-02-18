@@ -34,28 +34,20 @@ session_start();
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
 	<section id="main">
-        <h2>Prove 06 Database Access</h2>
+        <h2>Prove 06 Database Payment Access</h2>
             
-            <form method="post" name="displaychild_form" id="displaychild_form"
-                  action="listchildren.php" >      
+            <form method="post" name="displaypayment_form" id="displaypayment_form"
+                  action="listpayments.php" >      
                     
-                <button type="submit" id="displaychild">List of Children</button><br>
+                <button type="submit" id="displaypayment">List of Payments</button><br>
             </form>
-            <form method="post" name="displayguardian_form" id="displayguardian_form"
-                  action="listguardian.php" >      
-                   
-                <button type="submit" id="displayguardian">List of Guardians</button><br> 
-            </form>
-            <form>
-            <button type="button"><a href="payments.php">Search Payments</a></button><br><br>
-            </form>
-            
-            <form method="post" name="teach06_form" id="teach06_form"
-                  action="post.php" >  
-                <label for="clname">Search by child's last name:</label><br>
-                <input type="text" name="clastname" id="clname" size="40" ><br><br> 
-                <label for="glname">Search by guardian's last name:</label><br>
-                <input type="text" name="glastname" id="glname" size="40" ><br><br>   
+                        
+            <form method="post" name="teach06_paymentform" id="teach06_paymentform"
+                  action="paymentpost.php" >  
+                <label for="clname">Search payments by child's last name:</label><br>
+                <input type="text" name="pay_clastname" id="clname" size="40" ><br><br> 
+                <label for="glname">Search payments by guardian's last name:</label><br>
+                <input type="text" name="pay_glastname" id="glname" size="40" ><br><br>   
                 <input type="submit"><br><br>                    
             </form>
 

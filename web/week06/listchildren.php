@@ -10,7 +10,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenaca Willans | Database Retrieve List</title>
+	<title>Jenaca Willans | Database Retrieve Children List</title>
 	<meta charset="utf-8">
         <meta name="author" content="Jenaca Willans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -10,7 +10,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenaca Willans | Database Retrieve List</title>
+	<title>Jenaca Willans | Database Retrieve Payment List</title>
 	<meta charset="utf-8">
         <meta name="author" content="Jenaca Willans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,17 +39,40 @@ session_start();
     	<section id="main">
     		<h2>Results</h2>
         <div id="phpdiv">
+            <table id="paymenttable">
+                <thead id="payment_table">
+                    <tr>
+                        <th>Payment Due Date</th>
+                        <th>Payment Date</th>
+                        <th>Amount Due</th>
+                        <th>Amount Paid</th>
+                        <th>Payment Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+
           <?php
                 
-                $statement = $db->query('SELECT * FROM acw.child');
+                $statement = $db->query('SELECT * FROM acw.payment');
                 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
 
                 foreach ($results as $row)
                 {
-                  echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
+                echo "<tr>
+                        <td>" . $row['payment_due_date'] . "</td>
+                        <td>" . $row['payment_date'] . "</td>
+                        <td>" . "$" . $row['payment_amount_due'] . "</td>
+                        <td>" . "$" .  $row['payment_amount_paid'] . "</td>
+                        <td>" . $row['payment_note'] . "</td>
+                    </tr>";
                 }
             
           ?> 
+
+              </tbody>  
+              </table>
                 <br>
             </div> <!--- id phpdiv ---->   
       </section>

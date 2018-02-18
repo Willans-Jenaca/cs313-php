@@ -23,6 +23,20 @@ form {
     padding: 0.5em;
 }
 
+input, button {
+    color: #FF7A1C;
+    padding: 0.4em;
+}
+
+input, button, a {
+    color: #FF7A1C;
+    text-decoration: none;
+}
+
+label {
+    color: #2D16DE;
+}
+
 h1 {
     text-align: center;
     color: #FF7A1C;
@@ -31,6 +45,10 @@ h1 {
 h2 {
     text-align: center;
     color: #FF7A1C;
+}
+
+h3 {
+    color: #8B8C8B;
 }
 
 .hide {
@@ -158,54 +176,34 @@ nav ul ul li a {
 /*end of nav dropdown*/
 
 /* begin table css */
-.booksform {
-    display: flex;
-    border: 0.5em solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1em;
+
+#paymenttable {
+    display: inline-block;
+    margin: 2em;
+    border-collapse: separate;
+    border-spacing: 50px 0;
 }
 
-.checkoutform {
-    display: flex;
-    border: 0.5em solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1em;
+#payment_table {
+    /*width: 90%;*/
+    /*display: inline-table;*/
+    /*margin: 1em;*/
 }
 
-#books {
-    display: flex;
-    flex-direction: row;
-}
-
-#bookstable1 {
-    /*width: 50%;
-    display: inline-table;*/
+#payment_table, thead {
     margin: 1em;
+    /*color: #FF7A1C;*/
 }
 
-#bookstable2 {
-    /*width: 50%;
-    display: inline-table;*/
-    margin: 1em;
+#payment_table, th {
+    color: #FF7A1C;
 }
 
-#bookstable3 {
-    /*width: 50%;
-    display: inline-table;*/
-    margin: 1em;
+#payment_table, td {
+    color: #2D16DE;
+    padding: 10px 0;
 }
 
-#bookstable4 {
-    /*width: 50%;
-    display: inline-table;*/
-    margin: 1em;
-}
 /* end table css*/ 
 
 /* begin address*/
@@ -260,8 +258,7 @@ footer {
 /*** iPads (portrait and landscape) ***/
 @media all and (min-width : 601px) and (max-width : 1024px) 
 {
-
-    #books {
+    #paymenttable {
         flex-wrap: wrap;
     }
 }
@@ -286,7 +283,7 @@ footer {
     }
 
 
-    #books {
+    #paymenttable {
         flex-wrap: wrap;
     }
 }

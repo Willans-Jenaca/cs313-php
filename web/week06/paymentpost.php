@@ -7,8 +7,8 @@ $db = get_db();
                 
 // Set CLEAN session variables
 
-$_SESSION["clastname"] = htmlspecialchars($_POST["clastname"]);
-$_SESSION["glastname"] = htmlspecialchars($_POST["glastname"]);
+$_SESSION["pay_clastname"] = htmlspecialchars($_POST["pay_clastname"]);
+$_SESSION["pay_glastname"] = htmlspecialchars($_POST["pay_glastname"]);
 
 ?>
 
@@ -42,14 +42,14 @@ $_SESSION["glastname"] = htmlspecialchars($_POST["glastname"]);
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
     	<section id="main">
-    		<h2>Results</h2>
+    		<h2>Payment Results</h2>
         <div id="phpdiv">
           <?php
 
-            echo "<h3>Children:</h3><br>";
+            echo "<h3>Payments by Child:</h3><br>";
                             
-            $statement = $db->query("SELECT * FROM acw.child 
-              WHERE child_last_name='" . $_SESSION['clastname'] . "'");
+            $statement = $db->query("SELECT * FROM acw.payment 
+              WHERE payment_child_id='" . $_SESSION['pay_clastname'] . "'");
             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
             if($results != NULL) {
@@ -61,10 +61,10 @@ $_SESSION["glastname"] = htmlspecialchars($_POST["glastname"]);
                 echo "<p>No children match your search</p><br>";
             }
                
-            echo "<h3>Guardians: </h3><br>";
+            echo "<h3>Payments by Guardian: </h3><br>";
 
-            $guardianStatement = $db->query("SELECT * FROM acw.guardian 
-              WHERE guardian_last_name='" . $_SESSION['glastname'] . "'");
+            $guardianStatement = $db->query("SELECT * FROM acw.payment 
+              WHERE guardian_last_name='" . $_SESSION['pay_glastname'] . "'");
             $guardianResults = $guardianStatement->fetchAll(PDO::FETCH_ASSOC);
 
             if($guardianResults != NULL) {

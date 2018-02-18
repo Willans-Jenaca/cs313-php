@@ -10,7 +10,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Jenaca Willans | Database Retrieve List</title>
+	<title>Jenaca Willans | Database Retrieve Guardian List</title>
 	<meta charset="utf-8">
         <meta name="author" content="Jenaca Willans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,12 +41,12 @@ session_start();
         <div id="phpdiv">
           <?php
                 
-                $statement = $db->query('SELECT * FROM acw.child');
+                $statement = $db->query('SELECT * FROM acw.guardian');
                 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach ($results as $row)
                 {
-                  echo "<p>" . $row['child_last_name'] . ", " . $row['child_first_name'] . "</p>";
+                  echo "<p>" . $row['guardian_last_name'] . ", " . $row['guardian_first_name'] . "</p>";
                 }
             
           ?> 
