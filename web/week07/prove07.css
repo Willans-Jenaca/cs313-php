@@ -1,0 +1,300 @@
+html * { 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -moz-box-sizing: border-box;
+    font-family: VAG Rounded, sans-serif;
+    margin: 0 auto;
+    text-align: left;
+    color: #C7C7C7;
+    /*color palette credit: http://www.colourlovers.com/palette/3000694/cerr */
+}
+
+body {
+    margin: 0 auto;
+    font-family: VAG Rounded, sans-serif;
+    background-color: #C7C7C7;
+}
+
+#main {
+    padding: 3em;
+}
+
+form {
+    padding: 0.5em;
+}
+
+input, button {
+    color: #FF7A1C;
+    padding: 0.4em;
+}
+
+input, button, a {
+    color: #FF7A1C;
+    text-decoration: none;
+}
+
+label {
+    color: #2D16DE;
+}
+
+h1 {
+    text-align: center;
+    color: #FF7A1C;
+}
+
+h2 {
+    text-align: center;
+    color: #FF7A1C;
+}
+
+h3 {
+    color: #8B8C8B;
+}
+
+.hide {
+    display: none;
+    font-size: 1px;
+    margin: 0em;
+    padding: 0em;
+}
+
+p {
+    color: #2D16DE;
+    padding: 0.5em;
+}
+
+img {
+    padding: 0.5em;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #8B8C8B;
+    align-items: center;
+}
+
+nav div:first-child img {
+    height: 90px;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    border-bottom: none;
+    flex: auto;
+}
+
+nav ul li a {
+    color: #2D16DE;
+    text-decoration: none;
+    margin: 0;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+}
+
+.logodiv {
+    padding: 0;
+    margin-left: .8rem;
+    margin-right: 1rem;
+    background: #8b8c8b;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #FF7A1C; 
+    /*border-bottom: 1px solid #3786a3;*/
+}
+
+/* nav drop-down*/
+
+/*color of text for nav with dropdown*/
+nav span {
+    color: #2D16DE;
+}
+
+/* DropDown Arrow */
+nav span:after {        
+    border: 0.313em solid transparent; 
+    border-bottom: none;  
+    border-top-color: #FF7A1C;  
+    content: ''; /* content of the arrow, keep this empty */
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    margin-left: .5em;
+}
+
+/*hide drop down options until hover*/
+nav ul ul {
+    display: none;
+    font-size: 0px;
+    margin: 0em;
+    padding: 0em;
+}
+
+/*display drop down options after hover*/
+nav ul li:hover > ul {
+    margin-top: 21em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+nav ul:after {
+    content:""; 
+    clear: both; 
+}
+
+nav ul ul {
+    background: #8B8C8B; 
+    padding: 20px 0px 10px 0px; 
+    position: absolute; /*taking this away expands the height of the top nav*/
+    flex-direction: column; /*keep - this takes it from 1 row to 2*/
+    white-space: nowrap; /*keeps words in the link together*/
+}
+
+nav ul ul li {
+    border-bottom: 1px solid #FF7A1C; 
+    /*border-bottom: 1px solid #3786a3;*/
+    position: relative;
+    flex-direction: column; /*keep - aligns left*/
+    display: flex; /*keep - aligns left*/
+    margin: 2em;
+}
+
+/*words on the drop down*/
+nav ul ul li a {
+    padding: 3px 20px;
+}
+
+/*end of nav dropdown*/
+
+/* begin table css */
+
+#paymenttable {
+    display: inline-block;
+    margin: 2em;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
+
+#payment_table {
+    /*width: 90%;*/
+    /*display: inline-table;*/
+    /*margin: 1em;*/
+}
+
+#payment_table, thead {
+    margin: 1em;
+    /*color: #FF7A1C;*/
+}
+
+#payment_table, th {
+    color: #FF7A1C;
+}
+
+#payment_table, td {
+    color: #2D16DE;
+    padding: 10px 0;
+}
+
+/* end table css*/ 
+
+/* begin address*/
+.acw3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 50vw;*/
+    padding-top: 1em;
+}
+
+.acw3 > * {
+    margin: 1.5em;
+}
+
+.acw4 {
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;*/
+    padding-top: 1em;
+}
+
+.acw5 {
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;*/
+    padding-top: 1em;
+}
+
+.acw6 {
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;*/
+    padding-top: 1em;
+}
+/* end address*/
+
+footer {
+    background-color: #8B8C8B;
+    display: flex;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;  
+    font-family: Verdana; 
+    color: #2D16DE;
+}
+
+/*** iPads (portrait and landscape) ***/
+@media all and (min-width : 601px) and (max-width : 1024px) 
+{
+    #paymenttable {
+        flex-wrap: wrap;
+    }
+}
+
+/*** Smartphones (portrait and landscape) ***/
+@media all and (max-width : 600px) 
+{ 
+/* Flex Container*/
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+    /* Flex Item */
+    .wrapper > * {
+        order: 100;
+        margin: 0 auto;
+        padding: 0em;
+    }
+
+
+    #paymenttable {
+        flex-wrap: wrap;
+    }
+}
+
+/*footer {
+    width: 100%; 
+    position: absolute; /* sticky footer */
+  /*  bottom:0px; 
+    padding:2px;
+    background-color: #BA7E6E; 
+    text-align:center; 
+    font-family: Verdana; 
+    color: #1F233E;
+}*/
