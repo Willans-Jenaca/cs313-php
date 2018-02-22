@@ -1,21 +1,27 @@
 <?php
     session_start();
+
+    $_SESSION['username'] = htmlspecialchars($_POST['username']);
+    $_SESSION['password'] = htmlspecialchars($_POST['password']);
+
     $error = ''; // Variable To Store Error Message
     if (isset($_POST['submit'])) {
-        if (empty($_POST['username']) || empty($_POST['password'])) {
+        if (empty($_SESSION['username']) || empty($_SESSION['password'])) {
             $error = "Username or Password is required";
         }
         else {
             // Define $username and $password
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $db = pg_connect("host=ec2-54-163-234-99.compute-1.amazonaws.com port=5432 dbname=ddq8lql4jjo099 user=hiewrduczohyvi password=5351c4f69d1cd32ea6c8271edf60cee446173a8857462f425fa86ba37b8b652c");
-            $result = pg_query($db,"SELECT * FROM users WHERE username = '$username'");
+            $username = $_SESSION['username'];
+            $password = $_SESSION['password'];
+            require_once("dbConnect.php");
+            $db = get_db();
+
+            $result = pg_query($db,"SELECT * FROM acw.authuser WHERE authuser_name = '$username'");
             $rows = pg_num_rows($result);
             if ($rows == 1) {
                 while($row=pg_fetch_assoc($result)) {
-                    if(password_verify($password, $row['password'])) {
-                        $_SESSION["userId"] = $row['id'];
+                    if(password_verify($password, $row['authuser_password'])) {
+                        $_SESSION["userId"] = $row['authuser_id'];
                         $_SESSION["user"] = $username;
                         header("location: profile.php");
                     }

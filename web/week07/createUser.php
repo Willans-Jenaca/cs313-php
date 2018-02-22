@@ -1,24 +1,33 @@
 <?php
+// Start the Session
+session_start(); 
+
+$_SESSION['username'] = htmlspecialchars($_POST['username']);
+$_SESSION['password'] = htmlspecialchars($_POST['password']);
+$_SESSION['passwordConfirm'] = htmlspecialchars($_POST['passwordConfirm']);
+
     $is_unique = false;
     $error = ''; // Variable To Store Error Message
     if (isset($_POST['submit'])) {
-        if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['passwordConfirm'])) {
+        if (empty($_SESSION['username']) || empty($_SESSION['password']) || empty($_SESSION['passwordConfirm'])) {
             $error = "All fields are required!";
         }
         else {
             // Define $username and $password
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $passwordConfirm = $_POST['passwordConfirm'];
+            $username = $_SESSION['username'];
+            $password = $_SESSION['password'];
+            $passwordConfirm = $_SESSION['passwordConfirm'];
             if ($password !== $passwordConfirm) {
                 $error = "Passwords do not match!";
             }
             else {
-                $db = pg_connect("host=ec2-54-163-234-99.compute-1.amazonaws.com port=5432 dbname=ddq8lql4jjo099 user=hiewrduczohyvi password=5351c4f69d1cd32ea6c8271edf60cee446173a8857462f425fa86ba37b8b652c");
-                $result = pg_query($db, "SELECT * FROM users");
+                require_once("dbConnect.php");
+                $db = get_db();
+
+                $result = pg_query($db, "SELECT * FROM acw.authuser");
                 
                 while ($row=pg_fetch_assoc($result)) {
-                    if ($username == $row['username']) {
+                    if ($username == $row['authuser_name']) {
                         $error = "Sorry " . $username . " already exists. Choose a different username.";
                         $is_unique = false;
                         break;
@@ -29,7 +38,7 @@
                 }
                 if ($is_unique == true) {
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                    $result = pg_query($db,"INSERT INTO users VALUES (default, '$username', '$hashed_password')");
+                    $result = pg_query($db,"INSERT INTO acw.authuser VALUES (default, '$username', '$hashed_password')");
                     header("location: index.php");
                 }
             }

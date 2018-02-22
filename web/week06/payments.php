@@ -38,7 +38,7 @@ session_start();
         <h2>Prove 06 Database Payment Access</h2>
             
             <form method="post" name="addpayment_form" id="addpayment_form"
-                  action="addpayment.php" >      
+                  action="../week07/addpayment.php" >      
                     
                 <button type="submit" id="addpayment">Add Payment</button><br>
             </form>
