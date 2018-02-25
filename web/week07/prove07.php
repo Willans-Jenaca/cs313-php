@@ -31,6 +31,7 @@ session_start();
                     <ul>
                         <li><a href="prove07.php">Home</a></li>
                         <li><a href="payments.php">Payments</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul> 
                 </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->

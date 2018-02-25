@@ -40,7 +40,7 @@
                             Week 5 ~ Database Display</a></li>
                     <li><a href="week06/prove06.php" target="_blank">
                             Week 6 ~ Database Display II</a></li>
-                    <li><a href="week07/prove07.php" target="_blank">
+                    <li><a href="week07/index.php" target="_blank">
                             Week 7 ~ Database Display Final</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 8 ~ Coming Soon!<!-- </a> --></li>
