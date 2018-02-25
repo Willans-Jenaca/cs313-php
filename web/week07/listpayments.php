@@ -2,6 +2,10 @@
 // Start the Session
 session_start();
 
+if(!isset($_SESSION["user"])) {
+        header('Location: index.php');
+    }
+
  require_once("dbConnect.php");
  $db = get_db();
 
@@ -34,6 +38,7 @@ session_start();
             <ul>
                 <li><a href="prove07.php">Home</a></li>
                 <li><a href="payments.php">Payments</a></li>
+                <li><a href="logout.php">Logout <?php echo $_SESSION["user"]; ?></a></li>
             </ul> 
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
@@ -75,11 +80,10 @@ session_start();
                 }
             
           ?> 
-
               </tbody>  
               </table>
                 <br>
-            </div> <!--- id phpdiv ---->   
+            </div> <!--- id phpdiv ---->             
       </section>
 		<footer> 
             &copy; 2018 | Jenaca Willans

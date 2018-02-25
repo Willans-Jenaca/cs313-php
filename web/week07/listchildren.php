@@ -2,6 +2,10 @@ s<?php
 // Start the Session
 session_start();
 
+if(!isset($_SESSION["user"])) {
+        header('Location: index.php');
+    }
+
  require_once("dbConnect.php");
  $db = get_db();
 
@@ -34,6 +38,7 @@ session_start();
             <ul>
                 <li><a href="prove07.php">Home</a></li>
                 <li><a href="payments.php">Payments</a></li>
+                <li><a href="logout.php">Logout <?php echo $_SESSION["user"]; ?></a></li>
             </ul> 
         </nav> <!--- logonav ---->
 			</header> <!--- class headernav ---->
@@ -52,7 +57,29 @@ session_start();
             
           ?> 
                 <br>
-            </div> <!--- id phpdiv ---->   
+            </div> <!--- id phpdiv ---->  
+            <div>
+                <form method="post" name="edit_childlist" id="edit_childlist"
+                  action="editchild.php" >                     
+                   
+                <label for="edit_child_select">Edit Child:</label><br>
+                <select name="child_id" id="edit_child_select" required>
+                    <option value="">Select a Child</option>
+                <?php                     
+
+                    $statement = $db->query('SELECT * FROM acw.child');
+                    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+                    foreach ($results as $row)
+                    {
+                      echo '<option value="' . $row['child_id'] . '">' . $row['child_last_name'] . ', ' 
+                      . $row['child_first_name'] . ' ' . $row['child_dateofbirth'] . '</option>';
+
+                    }
+                ?>
+                </select><br><br>
+                <input type="submit"><br><br>
+            </div>   
       </section>
 		<footer> 
             &copy; 2018 | Jenaca Willans

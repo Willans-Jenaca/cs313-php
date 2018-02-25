@@ -42,6 +42,9 @@ if(!isset($_SESSION["user"])) {
 	<section id="main">
         <h2>Prove 07 Database Access</h2>
             
+            <form>
+            <button type="button"><a href="payments.php">Search Payments</a></button><br><br>
+            </form>
             <form method="post" name="displaychild_form" id="displaychild_form"
                   action="listchildren.php" >      
                     
@@ -51,9 +54,6 @@ if(!isset($_SESSION["user"])) {
                   action="listguardian.php" >      
                    
                 <button type="submit" id="displayguardian">List Guardians</button><br> 
-            </form>
-            <form>
-            <button type="button"><a href="payments.php">Search Payments</a></button><br><br>
             </form>
             
             <form method="post" name="teach07_form" id="teach07_form"
