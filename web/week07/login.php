@@ -27,11 +27,10 @@
                 if (password_verify($password, $hashedPasswordFromDB)) {
                     // password was correct, put the user on the session, and redirect to home
                     $_SESSION['user'] = $username;
-                    header("Location: profile.php");
+                    header("Location: prove07.php");
                     die(); // we always include a die after redirects.
                 } else {
-                        $error = "Username or Password is incorrect";
-                        break;
+                    $error = "Username or Password is incorrect";
                 }
             } else {
                 $error = "Username or Password is incorrect";
