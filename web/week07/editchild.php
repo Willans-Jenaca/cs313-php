@@ -50,11 +50,13 @@ $_SESSION['edit_child_id'] = htmlspecialchars($_POST['child_id']);
         <?php
             $child_id = $_SESSION['edit_child_id'];
             //settype($child_id, "string");
-            echo $child_id;
+            //echo $child_id;
+
+            //hard code child_id but still not able to take a variable
+            //same with submitting the editchildpost.php
             $num2 = 2;
              // $query = 'SELECT * FROM acw.child WHERE child_id=:child_id';
              // $statement = $db->prepare($query);
-            // $statement = $db->query('SELECT * FROM acw.child WHERE child_id=2');
             $statement = $db->query('SELECT * FROM acw.child WHERE child_id=2');
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
@@ -75,8 +77,7 @@ $_SESSION['edit_child_id'] = htmlspecialchars($_POST['child_id']);
                $child_dateofbirth = $row['child_dateofbirth']; 
                $child_diagnoses = $row['child_diagnoses']; 
             }
-
-            
+          
            ?> 
                                   
             <form method="post" name="edit_childform" id="edit_childform"
@@ -84,29 +85,29 @@ $_SESSION['edit_child_id'] = htmlspecialchars($_POST['child_id']);
                 
                 <label for="editchild_clname">Child's Last Name:</label><br>
                 <input type="text" name="editchild_clastname" id="editchild_clname" 
-                    placeholder="<?php echo $child_last_name; ?>" size="40" required><br><br> 
+                    placeholder="<?php echo $child_last_name; ?>" size="40"><br><br> 
                 <label for="editchild_cfname">Child's First Name:</label><br>
                 <input type="text" name="editchild_cfirstname" id="editchild_cfname" 
-                    placeholder="<?php echo $child_first_name; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_first_name; ?>" size="40"><br><br>
                     <label for="editchild_street">Street Address:</label><br>
                 <input type="text" name="editchild_street" id="editchild_street" 
-                    placeholder="<?php echo $child_street_address; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_street_address; ?>" size="40"><br><br>
                     <label for="editchild_city">City:</label><br>
                 <input type="text" name="editchild_city" id="editchild_city" 
-                    placeholder="<?php echo $child_city; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_city; ?>" size="40"><br><br>
                     <label for="editchild_state">State:</label><br>
                 <input type="text" name="editchild_state" id="editchild_state" 
-                    placeholder="<?php echo $child_state_id; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_state_id; ?>" size="40"><br><br>
                     <label for="editchild_zip">Zip:</label><br>
                 <input type="text" name="editchild_zip" id="editchild_zip" 
-                    placeholder="<?php echo $child_zip; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_zip; ?>" size="40"><br><br>
                 <label for="editchild_cDOB">Date of Birth:</label><br>
                 <input type="date" name="editchild_cDOB" id="editchild_cDOB" 
                     size="40" min="1900-01-01" placeholder="<?php echo $child_dateofbirth; ?>" 
-                    pattern="\d{4}-{1}\d{2}-{1}\d{2}" required><br><br>
+                    pattern="\d{4}-{1}\d{2}-{1}\d{2}"><br><br>
                 <label for="editchild_dx">Diagnosis:</label><br>
                 <input type="text" name="editchild_dx" id="editchild_dx" 
-                    placeholder="<?php echo $child_diagnoses; ?>" size="40" required><br><br>
+                    placeholder="<?php echo $child_diagnoses; ?>" size="40"><br><br>
                
                 <input type="submit"><br><br>                    
             </form>
