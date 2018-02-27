@@ -49,22 +49,19 @@ $_SESSION['edit_child_id'] = htmlspecialchars($_POST['child_id']);
 
         <?php
             $child_id = $_SESSION['edit_child_id'];
-            //settype($child_id, "string");
-            //echo $child_id;
 
-            //hard code child_id but still not able to take a variable
-            //same with submitting the editchildpost.php
-            $num2 = 2;
-             // $query = 'SELECT * FROM acw.child WHERE child_id=:child_id';
-             // $statement = $db->prepare($query);
-            $statement = $db->query('SELECT * FROM acw.child WHERE child_id=2');
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-            // $statement = $db->query('SELECT * FROM acw.child WHERE child_id=:child_id');
-            //  $statement->bindValue(':child_id', $child_id);
-            //  $result = $statement->execute();
-
-             echo var_dump($result);
+            try 
+            {
+                $statement = $db->query('SELECT * FROM acw.child WHERE child_id=' . $child_id . '');
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            } catch (Exception $ex)
+                {
+                    // You don't want to output the Exception message in
+                    // a production environment
+                    echo "Error with Database.";
+                    //echo "Error with DB. Details: $ex";
+                    die();
+            }
                 
             foreach ($result as $row)
             {
@@ -89,16 +86,33 @@ $_SESSION['edit_child_id'] = htmlspecialchars($_POST['child_id']);
                 <label for="editchild_cfname">Child's First Name:</label><br>
                 <input type="text" name="editchild_cfirstname" id="editchild_cfname" 
                     placeholder="<?php echo $child_first_name; ?>" size="40"><br><br>
-                    <label for="editchild_street">Street Address:</label><br>
+                <label for="editchild_street">Street Address:</label><br>
                 <input type="text" name="editchild_street" id="editchild_street" 
                     placeholder="<?php echo $child_street_address; ?>" size="40"><br><br>
-                    <label for="editchild_city">City:</label><br>
+                <label for="editchild_city">City:</label><br>
                 <input type="text" name="editchild_city" id="editchild_city" 
                     placeholder="<?php echo $child_city; ?>" size="40"><br><br>
-                    <label for="editchild_state">State:</label><br>
-                <input type="text" name="editchild_state" id="editchild_state" 
-                    placeholder="<?php echo $child_state_id; ?>" size="40"><br><br>
-                    <label for="editchild_zip">Zip:</label><br>
+                    
+                <label for="editchild_state">State:</label><br>
+                <select name="editchild_state" id="editchild_state" required>
+                    <!-- <option value="">Select a State</option> -->
+                    <option value=""><?php echo $child_state_id; ?></option>
+                <?php                     
+
+                    $statement = $db->query('SELECT enumlabel FROM pg_enum WHERE enumtypid=16398');
+                    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+                    foreach ($results as $row)
+                    {
+                        // top echo lists values that cannot be seen, but updates appropriately.
+                        // second echo lists values that can be seen, but passes the value of "<span"
+                        //echo '<option value="' . $row['enumlabel'] . '">' . '</option>';
+                        echo '<option value=<span style=color:#000>' . $row['enumlabel'] . '</span></option>';
+                    }
+                ?>
+                </select><br><br>
+                                
+                <label for="editchild_zip">Zip:</label><br>
                 <input type="text" name="editchild_zip" id="editchild_zip" 
                     placeholder="<?php echo $child_zip; ?>" size="40"><br><br>
                 <label for="editchild_cDOB">Date of Birth:</label><br>

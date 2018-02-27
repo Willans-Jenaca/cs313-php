@@ -1,4 +1,4 @@
-s<?php
+<?php
 // Start the Session
 session_start();
 
@@ -46,7 +46,6 @@ if(!isset($_SESSION["user"])) {
     		<h2>Results</h2>
         <div id="phpdiv">
           <?php
-                
                 $statement = $db->query('SELECT * FROM acw.child');
                 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
