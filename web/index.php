@@ -44,7 +44,7 @@
                             Week 7 ~ Database Display Final</a></li>
                     <li><a href="http://teach09.herokuapp.com" target="_blank">
                             Week 9 ~ Teach Assingnment</a></li>
-                    <li><a href="http://cs313-node.herokuapp.com/postal" target="_blank">
+                    <li><a href="http://cs313-node.herokuapp.com" target="_blank">
                             Week 9 ~ Postal Rate Calculator</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 10 ~ Coming Soon!<!-- </a> --></li>
