@@ -44,12 +44,12 @@
                             Week 7 ~ Database Display Final</a></li>
                     <li><a href="http://teach09.herokuapp.com" target="_blank">
                             Week 9 ~ Teach Assingnment</a></li>
-                    <li><a href="http://cs313-node.herokuapp.com" target="_blank">
+                    <li><a href="http://cs313-node.herokuapp.com/postal" target="_blank">
                             Week 9 ~ Postal Rate Calculator</a></li>
                     <li><a href="http://jw-cs313-teach10.herokuapp.com" target="_blank">
                             Week 10 ~ Teach Assignment</a></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 10 ~ Coming Soon!<!-- </a> --></li>
+                    <li><a href="http://cs313-node.herokuapp.com" target="_blank">
+                            Week 10 ~ Prove</a></li>
                     <li><!-- <a href="" target="_blank"> -->
                             Week 11 ~ Coming Soon!<!-- </a> --></li>
                     <li><!-- <a href="" target="_blank"> -->
