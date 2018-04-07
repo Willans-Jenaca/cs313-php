@@ -49,15 +49,7 @@
                     <li><a href="http://jw-cs313-teach10.herokuapp.com" target="_blank">
                             Week 10 ~ Teach Assignment</a></li>
                     <li><a href="http://cs313-node.herokuapp.com" target="_blank">
-                            Week 10 ~ Prove</a></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 11 ~ Coming Soon!<!-- </a> --></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 12 ~ Coming Soon!<!-- </a> --></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 13 ~ Coming Soon!<!-- </a> --></li>
-                    <li><!-- <a href="" target="_blank"> -->
-                            Week 14 ~ Coming Soon!<!-- </a> --></li>
+                            Week 13 ~ Final Project - Node.js</a></li>
                 </ul>
             </section><br>  
         </main>
